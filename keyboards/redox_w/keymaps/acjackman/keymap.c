@@ -46,6 +46,10 @@ enum custom_keycodes {
 #define SFT_CLN LSFT(KC_SCLN)
 #define SFT_T LSFT(KC_T)
 
+#define M1_REC DYN_REC_START1
+#define M1_PLAY DYN_MACRO_PLAY1
+#define MX_STOP DYN_REC_STOP
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_QWERTY] = LAYOUT(
@@ -58,7 +62,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┐       ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┤
      KC_LSPO ,KC_Z    ,KC_X    ,KC_C    ,KC_V    ,KC_B    ,XXXXXXX ,XXXXXXX ,        KC_LBRC ,KC_RBRC ,KC_N    ,KC_M    ,KC_COMM ,KC_DOT  ,KC_SLSH ,KC_RSPC ,
   //├────────┼────────┼────────┼────────┼────┬───┴────┬───┼────────┼────────┤       ├────────┼────────┼───┬────┴───┬────┼────────┼────────┼────────┼────────┤
-     XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,     KC_LCMD ,    LT_SPC  ,LT_TAB  ,        LT_BSPC ,LT_ENT  ,    KC_DEL  ,     KC_LEFT ,KC_DOWN ,KC_UP   ,KC_RGHT
+     M1_REC  ,MX_STOP ,M1_PLAY ,XXXXXXX ,     KC_LCMD ,    LT_SPC  ,LT_TAB  ,        LT_BSPC ,LT_ENT  ,    KC_DEL  ,     KC_LEFT ,KC_DOWN ,KC_UP   ,KC_RGHT
   //└────────┴────────┴────────┴────────┘    └────────┘   └────────┴────────┘       └────────┴────────┘   └────────┘    └────────┴────────┴────────┴────────┘
   ),
 
